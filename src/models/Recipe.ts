@@ -1,6 +1,8 @@
+// Recipe for Main Page
+
 export default interface Recipe {
   id: number;
   image: string;
-  dishTypes: string;
   title: string;
+  // dishTypes: string;
 }
