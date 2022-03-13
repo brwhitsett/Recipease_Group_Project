@@ -9,6 +9,9 @@ import {
   Routes,
 } from "react-router-dom";
 import Header from "./components/Header";
+import Main from "./components/Main";
+import Details from "./components/Details";
+import Favorites from "./components/Favorites";
 
 function App() {
   return (
@@ -17,9 +20,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/gifs/search" element={<Main />} />
-          <Route path="/gifs/:id/details" element={<Details />} />
-          <Route path="/gifs/favorites" element={<Favorites />} />
+          <Route path="/recipes/complexSearch" element={<Main />} />
+          <Route path="/recipes/{id}/information" element={<Details />} />
+          <Route path="/recipes/favorites" element={<Favorites />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
