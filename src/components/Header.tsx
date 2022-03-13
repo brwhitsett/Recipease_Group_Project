@@ -2,21 +2,23 @@
 
 import { Link } from "react-router-dom";
 import "./Header.css";
+import logoBlack from "../assets/logos/logo-black.png";
+import userIcon from "../assets/icons/user.svg";
+import FavoritesIcon from "../assets/icons/favorites.svg";
 
 const Header = () => {
   return (
     <header className="Header">
+      <Link to="/recipes/favorites">
+        <img src={FavoritesIcon} alt="Favorites Icon" />
+      </Link>
       <Link to="/">
         <h1>
-          <div>
-            <img src={`assets/logos/logo-black.png`} alt="Logo" />;
-          </div>
+          <img src={logoBlack} alt="Logo" width={450} />
         </h1>
       </Link>
-      <Link to="/recipes/favorites">
-        <img src="/assets/icons/favorites.svg" alt="Favorites Icon" />
-      </Link>
-      <img src="/assets/icons/user.svg" alt="User Icon" />
+
+      <img src={userIcon} alt="User Icon" />
     </header>
   );
 };

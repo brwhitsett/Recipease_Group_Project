@@ -3,6 +3,7 @@
 import Diet from "./Diet";
 import DishType from "./DishType";
 import SearchBar from "./SearchBar";
+import searchIcon from "../assets/icons/search.svg";
 import "./SearchBox.css";
 
 const SearchBox = () => {
@@ -11,7 +12,7 @@ const SearchBox = () => {
       <SearchBar />
       <DishType />
       <Diet />
-      <button>search Icon?</button>
+      <img src={searchIcon} alt="search icon" />
     </form>
   );
 };

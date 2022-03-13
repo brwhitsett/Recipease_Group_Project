@@ -15,13 +15,13 @@ const RecipeCard = ({ singleRecipeCard }: Props) => {
 
   return (
     <li className="RecipeCard">
-      <Link to={`/gifs/${encodeURIComponent(singleRecipeCard.id)}/details`}>
-        <img src={singleRecipeCard.image} alt={singleRecipeCard.title} />
+      <Link to={`/gifs/${encodeURIComponent(singleRecipeCard?.id)}/details`}>
+        <img src={singleRecipeCard?.image} alt={singleRecipeCard?.title} />
       </Link>
-      {isFav(singleRecipeCard.id) ? (
+      {isFav(singleRecipeCard?.id) ? (
         <i
           className="fa-solid fa-heart"
-          onClick={() => removeFavorite(singleRecipeCard.id)}
+          onClick={() => removeFavorite(singleRecipeCard?.id)}
         ></i>
       ) : (
         <i
@@ -29,7 +29,7 @@ const RecipeCard = ({ singleRecipeCard }: Props) => {
           onClick={() => addFavorite(singleRecipeCard)}
         ></i>
       )}
-      <p>{singleRecipeCard.title}</p>
+      <p>{singleRecipeCard?.title}</p>
     </li>
   );
 };
