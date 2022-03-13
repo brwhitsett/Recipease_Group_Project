@@ -12,6 +12,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Details from "./components/Details";
 import Favorites from "./components/Favorites";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/recipes/favorites" element={<Favorites />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

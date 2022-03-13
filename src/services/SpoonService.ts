@@ -1,4 +1,5 @@
 // TO DO: Add endpoints for Meal Type & Diet Filters
+//TODO: CHANGE THE GETRANDOMRECIPE() TO THE ID-ENDPOINT AND RANDOMIZE THE ID.
 
 import axios from "axios";
 import RecipeResponse from "../models/RecipeResponse";
