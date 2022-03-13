@@ -6,7 +6,7 @@ import SingleRecipe from "../models/SingleRecipe";
 
 const key: string = process.env.REACT_APP_GIPHY_KEY || "";
 
-export const getRandomRecipes = (): Promise<RecipeResponse> => {
+export const getRandomRecipe = (): Promise<RecipeResponse> => {
   return axios
     .get("https://api.spoonacular.com/recipes/random", {
       params: { apiKey: key },
@@ -16,7 +16,7 @@ export const getRandomRecipes = (): Promise<RecipeResponse> => {
     });
 };
 
-export const getRecipeByTerm = (term: string): Promise<RecipeResponse> => {
+export const getRecipesByTerm = (term: string): Promise<RecipeResponse> => {
   return axios
     .get("https://api.spoonacular.com/recipes/complexSearch", {
       params: { apiKey: key, query: term },
