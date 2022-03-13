@@ -1,7 +1,7 @@
-import "./Favorite.css";
+import "./Favorites.css";
 
-const Favorite = () => {
-  return <div className="Favorite">Favorite works</div>;
+const Favorites = () => {
+  return <div className="Favorites">Favorite works</div>;
 };
 
-export default Favorite;
+export default Favorites;
