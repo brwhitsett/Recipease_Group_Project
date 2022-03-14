@@ -28,7 +28,7 @@ export const getRecipesByTerm = (term: string): Promise<SearchResponse> => {
     });
 };
 
-export const getRecipeById = (id: number): Promise<SingleRecipeResponse> => {
+export const getRecipeById = (id: string): Promise<SingleRecipeResponse> => {
   return axios
     .get(
       `https://api.spoonacular.com/recipes/${encodeURIComponent(

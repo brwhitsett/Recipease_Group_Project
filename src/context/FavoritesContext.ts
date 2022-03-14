@@ -4,8 +4,8 @@ import Recipe from "../models/Recipe";
 interface FavoritesContextModel {
   favorites: Recipe[];
   addFavorite: (recipe: Recipe) => void;
-  removeFavorite: (id: number) => void;
-  isFav: (id: number) => boolean;
+  removeFavorite: (id: string) => void;
+  isFav: (id: string) => boolean;
 }
 
 const defaultValues: FavoritesContextModel = {
