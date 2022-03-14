@@ -3,9 +3,10 @@
 
 import axios from "axios";
 import RecipeResponse from "../models/RecipeResponse";
-import SingleRecipe from "../models/SingleRecipe";
+import SearchResponse from "../models/SearchResponse";
+import SingleRecipeResponse from "../models/SingleRecipeResponse";
 
-const key: string = process.env.REACT_APP_GIPHY_KEY || "";
+const key: string = process.env.REACT_APP_SPOONACULAR_KEY || "";
 
 export const getRandomRecipe = (): Promise<RecipeResponse> => {
   return axios
@@ -17,7 +18,7 @@ export const getRandomRecipe = (): Promise<RecipeResponse> => {
     });
 };
 
-export const getRecipesByTerm = (term: string): Promise<RecipeResponse> => {
+export const getRecipesByTerm = (term: string): Promise<SearchResponse> => {
   return axios
     .get("https://api.spoonacular.com/recipes/complexSearch", {
       params: { apiKey: key, query: term },
@@ -27,7 +28,7 @@ export const getRecipesByTerm = (term: string): Promise<RecipeResponse> => {
     });
 };
 
-export const getRecipeById = (id: number): Promise<SingleRecipe> => {
+export const getRecipeById = (id: number): Promise<SingleRecipeResponse> => {
   return axios
     .get(
       `https://api.spoonacular.com/recipes/${encodeURIComponent(

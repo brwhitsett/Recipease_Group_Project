@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FormEvent, useState } from "react";
 
 const SearchBox = () => {
-  const [term, setTerm] = useState("");
+  const [query, setQuery] = useState("");
   const [type, setMeal] = useState("");
   const [diet, setDiet] = useState("");
 
@@ -16,7 +16,7 @@ const SearchBox = () => {
   const submitHandler = (e: FormEvent): void => {
     e.preventDefault();
     navigate(
-      `/recipes/complexSearch?${new URLSearchParams({ term, type, diet })}`
+      `/recipes/complexSearch?${new URLSearchParams({ query, type, diet })}`
     );
   };
 
@@ -26,9 +26,9 @@ const SearchBox = () => {
         className="SearchBar"
         placeholder="search recipease"
         name="SearchBar"
-        value={term}
+        value={query}
         id="SearchBar"
-        onChange={(e) => setTerm(e.target.value)}
+        onChange={(e) => setQuery(e.target.value)}
       ></input>
       <div className="meal-type-container">
         <select
