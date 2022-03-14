@@ -13,14 +13,14 @@ const FavoritesContextProvider = ({ children }: Props) => {
     setFavorites((prev) => [...prev, recipe]);
   };
 
-  const removeFavorite = (id: number): void => {
+  const removeFavorite = (id: string): void => {
     setFavorites((prev) => {
       const index: number = prev.findIndex((item) => item.id === id);
       return [...prev.slice(0, index), ...prev.slice(index + 1)];
     });
   };
 
-  const isFav = (id: number): boolean =>
+  const isFav = (id: string): boolean =>
     favorites.some((recipe) => recipe.id === id);
 
   return (

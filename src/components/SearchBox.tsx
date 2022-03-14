@@ -15,9 +15,25 @@ const SearchBox = () => {
 
   const submitHandler = (e: FormEvent): void => {
     e.preventDefault();
-    navigate(
-      `/recipes/complexSearch?${new URLSearchParams({ query, type, diet })}`
-    );
+    const params: any = {};
+    if (query) {
+      params.query = query;
+    }
+    if (type) {
+      params.type = type;
+    }
+    if (diet) {
+      params.diet = diet;
+    }
+    navigate(`/recipes/complexSearch?${new URLSearchParams(params)}`);
+
+    // navigate(
+    //   `/recipes/complexSearch?${new URLSearchParams({
+    //     ...(query ? { query } : {}),
+    //     ...(type ? { type } : {}),
+    //     ...(diet ? { diet } : {}),
+    //   })}`
+    // );
   };
 
   return (
