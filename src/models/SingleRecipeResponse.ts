@@ -5,6 +5,14 @@ interface ExtendedIngredients {
   original: string;
 }
 
+interface Steps {
+  step: string;
+}
+
+interface AnalyzedInstructions {
+  steps: Steps[];
+}
+
 export default interface SingleRecipeResponse {
   id: string;
   title: string;
@@ -12,6 +20,7 @@ export default interface SingleRecipeResponse {
   servings: number;
   image: string;
   extendedIngredients: ExtendedIngredients[];
+  analyzedInstructions: AnalyzedInstructions[];
   instructions: string;
   cuisines: string;
   dishTypes: string;

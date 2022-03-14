@@ -26,6 +26,9 @@ const SearchBox = () => {
       params.diet = diet;
     }
     navigate(`/recipes/complexSearch?${new URLSearchParams(params)}`);
+    setQuery("");
+    setMeal("");
+    setDiet("");
 
     // navigate(
     //   `/recipes/complexSearch?${new URLSearchParams({
