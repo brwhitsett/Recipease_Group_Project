@@ -48,16 +48,14 @@ const Details = () => {
         </ul>
       </div>
       <div>
-        <p>{recipe?.instructions}</p>
+        <p>
+          {recipe?.analyzedInstructions.map((item) =>
+            item.steps.map((step) => <li>{step.step}</li>)
+          )}
+        </p>
       </div>
     </div>
   );
 };
 
-// ??????????????????
-//<ul>
-// <li>{ingredients!.map((ingredient) => ingredient.original)}</li>
-// </ul>
-// instructions: string;
-// }
 export default Details;
