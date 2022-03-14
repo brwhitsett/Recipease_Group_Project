@@ -9,9 +9,6 @@ const TodaysBox = () => {
     <div className="TodaysBox">
       <h2>TODAY'S RECIPEASE</h2>
       <RecipeCard singleRecipeCard={recipe!} />
-      <RecipeCard singleRecipeCard={recipe!} />
-      <RecipeCard singleRecipeCard={recipe!} />
-      <RecipeCard singleRecipeCard={recipe!} />
     </div>
   );
 };

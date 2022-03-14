@@ -31,4 +31,5 @@ const FavoritesContextProvider = ({ children }: Props) => {
     </FavoritesContext.Provider>
   );
 };
+
 export default FavoritesContextProvider;
