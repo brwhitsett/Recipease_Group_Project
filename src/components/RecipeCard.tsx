@@ -16,7 +16,7 @@ const RecipeCard = ({ singleRecipeCard }: Props) => {
   return (
     <li className="RecipeCard">
       <Link to={`/recipes/${encodeURIComponent(singleRecipeCard.id)}/details`}>
-        <img src={singleRecipeCard.image} alt={singleRecipeCard.title} />
+        <img src={singleRecipeCard.image!} alt={singleRecipeCard.title} />
       </Link>
       {isFav(singleRecipeCard.id) ? (
         <i

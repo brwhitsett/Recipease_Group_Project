@@ -2,6 +2,7 @@
 //TODO: CHANGE THE GETRANDOMRECIPE() TO THE ID-ENDPOINT AND RANDOMIZE THE ID.
 
 import axios from "axios";
+import QueryStringParams from "../models/QueryStringParamas";
 import RecipeResponse from "../models/RecipeResponse";
 import SearchResponse from "../models/SearchResponse";
 import SingleRecipeResponse from "../models/SingleRecipeResponse";
@@ -18,10 +19,13 @@ export const getRandomRecipe = (): Promise<RecipeResponse> => {
     });
 };
 
-export const getRecipesByTerm = (term: string): Promise<SearchResponse> => {
+export const getRecipesByTerm = (
+  params: QueryStringParams
+): Promise<SearchResponse> => {
+  params.apiKey = key;
   return axios
     .get("https://api.spoonacular.com/recipes/complexSearch", {
-      params: { apiKey: key, query: term },
+      params: params,
     })
     .then((response) => {
       return response.data;
