@@ -42,11 +42,13 @@ const Details = () => {
       </div>
 
       <div className="recipe-details-container">
-        <p>{recipe?.cuisines}</p>
-        <p>{recipe?.dishTypes}</p>
-        <p>{recipe?.diets}</p>
-        <p>{recipe?.readyInMinutes}</p>
-        <p>{recipe?.servings}</p>
+        <div className="cuisine-and-dish">
+          <p className="cuisine-text">{recipe?.cuisines}</p>
+          <p className="dishType-text">{recipe?.dishTypes}</p>
+        </div>
+        <p className="diets">{recipe?.diets}</p>
+        <p className="ready-in-minutes">{recipe?.readyInMinutes}</p>
+        <p className="servings">{recipe?.servings}</p>
       </div>
       <ul>
         {recipe?.extendedIngredients.map((ingredient) => (
