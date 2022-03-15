@@ -1,4 +1,4 @@
-Header {
+.Header {
   height: 100px;
   background-color: #fff;
   position: fixed;
@@ -9,12 +9,12 @@ Header {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
-.icon {
+.Header .icon {
   width: 40px;
   height: 40px;
   padding: 15px;
 }
 
-.black-logo {
-  width: 225px;
+.Header .black-logo {
+  width: 275px;
 }

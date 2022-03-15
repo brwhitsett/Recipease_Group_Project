@@ -35,8 +35,9 @@ const TodaysBox = () => {
   return (
     <div className="TodaysBox">
       <h2 className={`${searchTerm || mealType || diet ? "hide" : ""} `}>
-        TODAY'S RECIPEASE
+        <span>TODAY'S RECIPEASE</span>
       </h2>
+
       <ul>
         {recipes.map((recipe) => (
           <RecipeCard key={recipe.id} singleRecipeCard={recipe} />
