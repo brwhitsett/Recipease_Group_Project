@@ -20,33 +20,40 @@ const Details = () => {
   }, [id]);
   return (
     <div className="Details">
-      <div>
-        <img src={recipe?.image} alt={recipe?.title} />
+      <div className="recipe-img-p-container">
+        <div className="recipe-image">
+          <img src={recipe?.image} alt={recipe?.title} />
+        </div>
+
+        <div className="favorite-icon-container">
+          <p className="details-title">{recipe?.title}</p>
+          {isFav(recipe?.id!) ? (
+            <i
+              className="fa-solid fa-heart"
+              onClick={() => removeFavorite(recipe?.id!)}
+            ></i>
+          ) : (
+            <i
+              className="fa-regular fa-heart"
+              onClick={() => addFavorite(recipe!)}
+            ></i>
+          )}
+        </div>
       </div>
-      <div>
-        <p>{recipe?.title}</p>
-        {isFav(recipe?.id!) ? (
-          <i
-            className="fa-solid fa-heart"
-            onClick={() => removeFavorite(recipe?.id!)}
-          ></i>
-        ) : (
-          <i
-            className="fa-regular fa-heart"
-            onClick={() => addFavorite(recipe!)}
-          ></i>
-        )}
+
+      <div className="recipe-details-container">
         <p>{recipe?.cuisines}</p>
         <p>{recipe?.dishTypes}</p>
         <p>{recipe?.diets}</p>
         <p>{recipe?.readyInMinutes}</p>
         <p>{recipe?.servings}</p>
-        <ul>
-          {recipe?.extendedIngredients.map((ingredient) => (
-            <li>{ingredient.original}</li>
-          ))}
-        </ul>
       </div>
+      <ul>
+        {recipe?.extendedIngredients.map((ingredient) => (
+          <li>{ingredient.original}</li>
+        ))}
+      </ul>
+
       <div>
         <p>
           {recipe?.analyzedInstructions.map((item) =>

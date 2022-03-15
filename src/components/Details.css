@@ -1,0 +1,14 @@
+.Details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* font-family: "Inter", sans-serif; */
+}
+
+.Details .recipe-img-p-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
