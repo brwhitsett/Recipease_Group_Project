@@ -1,0 +1,49 @@
+.Favorites {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 125px 40px 20px 40px;
+}
+
+.Favorites h2 {
+  text-align: center;
+  padding: 5px 0 20px 0;
+  font-weight: 200;
+}
+
+.Favorites p {
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.Favorites .RecipeCard {
+  width: 40%;
+  margin: 20px;
+}
+
+.Favorites img {
+  position: relative;
+  width: 200px;
+}
+
+.Favorites p {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.Favorites i {
+  position: relative;
+  font-size: 40px;
+  top: -50px;
+  right: -50px;
+  color: white;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+}
+
+.Favorites .fa-solid {
+  color: #ad2632;
+}
