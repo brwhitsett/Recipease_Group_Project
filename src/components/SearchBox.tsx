@@ -5,6 +5,7 @@ import searchIcon from "../assets/icons/search.svg";
 import "./SearchBox.css";
 import { Link, useNavigate } from "react-router-dom";
 import { FormEvent, useState } from "react";
+import QueryStringParams from "../models/QueryStringParamas";
 
 const SearchBox = () => {
   const [query, setQuery] = useState("");
@@ -15,7 +16,7 @@ const SearchBox = () => {
 
   const submitHandler = (e: FormEvent): void => {
     e.preventDefault();
-    const params: any = {};
+    const params: QueryStringParams = {};
     if (query) {
       params.query = query;
     }
@@ -25,7 +26,7 @@ const SearchBox = () => {
     if (diet) {
       params.diet = diet;
     }
-    navigate(`/recipes/complexSearch?${new URLSearchParams(params)}`);
+    navigate(`/recipes/complexSearch?${new URLSearchParams({ ...params })}`);
     setQuery("");
     setMeal("");
     setDiet("");
