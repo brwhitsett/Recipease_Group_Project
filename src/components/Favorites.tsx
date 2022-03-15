@@ -6,7 +6,10 @@ import RecipeCard from "./RecipeCard";
 const Favorites = () => {
   const { favorites } = useContext(FavoritesContext);
   return (
-    <div className="Favorite">
+    <div className="Favorites">
+      <h2>
+        <span>YOUR FAVORITE RECIPEASE</span>
+      </h2>
       {favorites.map((favorite) => {
         return <RecipeCard singleRecipeCard={favorite} key={favorite.id} />;
       })}
