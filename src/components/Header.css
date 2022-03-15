@@ -2,11 +2,15 @@
   height: 100px;
   background-color: #fff;
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  display: flex;
   width: 100%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  z-index: 5;
 }
 
 .Header .icon {

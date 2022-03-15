@@ -1,0 +1,73 @@
+.SearchBox {
+  background-image: url("../assets/foodimages/searchBoxFoodImg.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* padding-top: 100px; */
+  /* margin-bottom: 35px; */
+}
+
+.SearchBox .searchBar-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.SearchBox .searchIcon {
+  width: 30px;
+  cursor: pointer;
+  position: absolute;
+  left: 320px;
+  top: 145px;
+  z-index: 1;
+}
+
+.SearchBox .SearchBar,
+.meal-type,
+.diet {
+  border-radius: 30px;
+  width: 200px;
+  height: 30px;
+  border-style: none;
+  box-sizing: border-box;
+  padding: 5px 30px;
+  font-size: 18px;
+  color: #76797a;
+}
+
+.SearchBox #SearchBar {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  margin: 20px;
+  /* margin-top: 130px; */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    rgba(42, 44, 36, 0.76);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  font-size: 28px;
+}
+
+.SearchBox ::placeholder {
+  color: white;
+  font-weight: 200;
+}
+
+.SearchBox .drop-down-container {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin-bottom: 100px;
+}
+
+.SearchBox .meal-type {
+  margin-right: 20px;
+}
+
+/* <img src={searchBoximg} alt="food image in searchbox" /> */

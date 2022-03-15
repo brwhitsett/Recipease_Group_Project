@@ -6,6 +6,7 @@ import "./SearchBox.css";
 import { Link, useNavigate } from "react-router-dom";
 import { FormEvent, useState } from "react";
 import QueryStringParams from "../models/QueryStringParamas";
+// import searchBoximg from "../assets/foodimages/searchBoxFoodImg.jpg";
 
 const SearchBox = () => {
   const [query, setQuery] = useState("");
@@ -42,16 +43,26 @@ const SearchBox = () => {
 
   return (
     <form className="SearchBox" onSubmit={submitHandler}>
-      <input
-        className="SearchBar"
-        placeholder="search recipease"
-        name="SearchBar"
-        value={query}
-        id="SearchBar"
-        onChange={(e) => setQuery(e.target.value)}
-      ></input>
-      <div className="meal-type-container">
+      <div className="searchBar-icon">
+        <img
+          src={searchIcon}
+          alt="search icon"
+          onClick={submitHandler}
+          className="searchIcon"
+        />
+        <input
+          className="SearchBar"
+          placeholder="search recipease"
+          name="SearchBar"
+          value={query}
+          id="SearchBar"
+          onChange={(e) => setQuery(e.target.value)}
+        ></input>
+      </div>
+
+      <div className="drop-down-container">
         <select
+          className="meal-type"
           name="meals"
           onChange={(e) => setMeal(e.target.value)}
           value={type}
@@ -66,9 +77,8 @@ const SearchBox = () => {
           <option value="sides">Side Dishes</option>
           <option value="dessert">Desserts</option>
         </select>
-      </div>
-      <div className="diet-container">
         <select
+          className="diet"
           name="diet"
           id="diet"
           value={diet}
@@ -84,9 +94,6 @@ const SearchBox = () => {
           <option value="keto">Keto</option>
         </select>
       </div>
-      <button>
-        <img src={searchIcon} alt="search icon" />
-      </button>
     </form>
   );
 };
