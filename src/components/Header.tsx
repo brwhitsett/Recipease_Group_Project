@@ -10,15 +10,19 @@ const Header = () => {
   return (
     <header className="Header">
       <Link to="/recipes/favorites">
-        <img src={FavoritesIcon} alt="Favorites Icon" />
+        <img
+          className="icon favorites"
+          src={FavoritesIcon}
+          alt="Favorites Icon"
+        />
       </Link>
       <Link to="/">
         <h1>
-          <img src={logoBlack} alt="Logo" width={450} />
+          <img className="black-logo" src={logoBlack} alt="Logo" width={450} />
         </h1>
       </Link>
 
-      <img src={userIcon} alt="User Icon" />
+      <img className="icon user" src={userIcon} alt="User Icon" />
     </header>
   );
 };
