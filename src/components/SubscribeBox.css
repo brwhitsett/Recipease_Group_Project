@@ -6,15 +6,15 @@
   width: 100%;
 }
 
-.subscribe-text {
+.SubscribeBox .subscribe-text {
   margin: 5px;
 }
 
-.subscribe-form {
+.SubscribeBox .subscribe-form {
   margin: 10px;
 }
 
-#email-input {
+.SubscribeBox #email-input {
   border-radius: 20px;
   border: none;
   height: 25px;
@@ -22,13 +22,13 @@
   font-family: "Inter", sans-serif;
 }
 
-.subscribe-button {
+.SubscribeBox .subscribe-button {
   color: #fff;
   background-color: black;
   border: none;
   margin: 5px;
 }
 
-.fa-arrow-right {
+.SubscribeBox .fa-arrow-right {
   font-size: 14px;
 }

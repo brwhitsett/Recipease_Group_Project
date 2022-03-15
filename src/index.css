@@ -3,7 +3,8 @@ h1,
 h2,
 p,
 ul,
-footer {
+footer,
+li {
   margin: 0;
 }
 

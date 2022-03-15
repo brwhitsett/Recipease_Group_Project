@@ -1,29 +1,29 @@
-Footer {
+.Footer {
   display: flex;
   height: 75px;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo-icon {
+.Footer .logo-icon {
   width: 55px;
   height: 55px;
   padding: 15px;
 }
 
-.copyright {
+.Footer .copyright {
   font-size: 9px;
   text-align: center;
   margin-top: 20px;
 }
 
-.social-media-container ul {
+.Footer .social-media-container ul {
   display: flex;
   list-style: none;
   padding: 5px;
 }
 
-.social-media-img {
+.Footer .social-media-img {
   margin: 2px;
   width: 30px;
   height: 30px;
