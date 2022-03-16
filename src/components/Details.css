@@ -9,13 +9,15 @@
 
 .Details .favorite-icon-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .Details .fa-heart {
-  position: relative;
   font-size: 36px;
   right: 5px;
   top: 35px;
+  padding-left: 10px;
 }
 
 .Details .fa-solid {

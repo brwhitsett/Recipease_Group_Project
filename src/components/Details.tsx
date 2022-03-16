@@ -43,10 +43,14 @@ const Details = () => {
 
       <div className="recipe-details-container">
         <div className="cuisine-and-dish">
-          <p className="cuisine-text">{recipe?.cuisines}</p>
-          <p className="dishType-text">{recipe?.dishTypes} </p>
+          <p className="cuisine-text">
+            {recipe?.cuisines.map((item) => `${item} `)}
+          </p>
+          <p className="dishType-text">
+            {recipe?.dishTypes.map((item) => `${item} | `)}
+          </p>
         </div>
-        <p className="diets">{recipe?.diets}</p>
+        <p className="diets">{recipe?.diets.map((item) => `${item} | `)}</p>
         <div className="time-and-servings">
           <p className="ready-in-minutes">
             Total Time: {recipe?.readyInMinutes}min

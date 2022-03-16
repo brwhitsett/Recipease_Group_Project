@@ -80,11 +80,12 @@
   appearance: none;
 }
 
-.SearchBox i {
+.SearchBox .fa-angle-down {
   position: relative;
   left: 175px;
   bottom: 25px;
   color: #ad2632;
+  pointer-events: none;
 }
 
 .SearchBox .meal-type {

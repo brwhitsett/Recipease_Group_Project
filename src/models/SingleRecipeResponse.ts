@@ -22,7 +22,7 @@ export default interface SingleRecipeResponse {
   extendedIngredients: ExtendedIngredients[];
   analyzedInstructions: AnalyzedInstructions[];
   instructions: string;
-  cuisines: string;
-  dishTypes: string;
-  diets: string;
+  cuisines: string[];
+  dishTypes: string[];
+  diets: string[];
 }

@@ -2,12 +2,18 @@
   height: 100px;
   background-color: #fff;
   position: fixed;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
   z-index: 5;
+}
+
+.Header .logo-and-icon-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .Header .fa-solid {
@@ -29,15 +35,10 @@
 }
 
 @media only screen and (min-width: 1000px) {
-  /* .Header .heart {
-    order: 2;
+  .Header .fa-heart {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 70px;
   }
-
-  .Header .logo {
-    order: 1;
-    padding-left: 20px;
-  }
-  .Header .fa-circle-user {
-    order: 3;
-  } */
 }

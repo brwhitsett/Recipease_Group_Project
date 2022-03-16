@@ -9,17 +9,24 @@ import FavoritesIcon from "../assets/icons/favorites.svg";
 const Header = () => {
   return (
     <header className="Header">
-      <Link to="/recipes/favorites" className="heart">
-        <i className="fa-solid fa-heart"></i>
-      </Link>
+      <div className="logo-and-icon-container">
+        <Link to="/recipes/favorites" className="heart">
+          <i className="fa-solid fa-heart"></i>
+        </Link>
 
-      <Link to="/" className="logo">
-        <h1>
-          <img className="black-logo" src={logoBlack} alt="Logo" width={450} />
-        </h1>
-      </Link>
+        <Link to="/" className="logo">
+          <h1>
+            <img
+              className="black-logo"
+              src={logoBlack}
+              alt="Logo"
+              width={450}
+            />
+          </h1>
+        </Link>
 
-      <i className="fa-solid fa-circle-user"></i>
+        <i className="fa-solid fa-circle-user"></i>
+      </div>
     </header>
   );
 };
