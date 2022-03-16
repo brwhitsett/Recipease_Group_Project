@@ -44,24 +44,32 @@ const Details = () => {
       <div className="recipe-details-container">
         <div className="cuisine-and-dish">
           <p className="cuisine-text">{recipe?.cuisines}</p>
-          <p className="dishType-text">{recipe?.dishTypes}</p>
+          <p className="dishType-text">{recipe?.dishTypes} </p>
         </div>
         <p className="diets">{recipe?.diets}</p>
-        <p className="ready-in-minutes">{recipe?.readyInMinutes}</p>
-        <p className="servings">{recipe?.servings}</p>
+        <div className="time-and-servings">
+          <p className="ready-in-minutes">
+            Total Time: {recipe?.readyInMinutes}min
+          </p>
+          <p className="servings">Servings: {recipe?.servings}</p>
+        </div>
       </div>
-      <ul>
+      <p className="ingred-size">Ingredients:</p>
+      <ul className="ingredients-list">
         {recipe?.extendedIngredients.map((ingredient) => (
-          <li>{ingredient.original}</li>
+          <li>-{ingredient.original}</li>
         ))}
       </ul>
 
-      <div>
-        <p>
+      <div className="instruction-container">
+        <p className="instruction-title">Instructions:</p>
+        <ol className="instruction-list">
           {recipe?.analyzedInstructions.map((item) =>
-            item.steps.map((step) => <li>{step.step}</li>)
+            item.steps.map((step) => (
+              <li className="instruction-steps">{step.step}</li>
+            ))
           )}
-        </p>
+        </ol>
       </div>
     </div>
   );
