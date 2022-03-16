@@ -9,10 +9,11 @@ import FavoritesIcon from "../assets/icons/favorites.svg";
 const Header = () => {
   return (
     <header className="Header">
-      <Link to="/recipes/favorites">
+      <Link to="/recipes/favorites" className="heart">
         <i className="fa-solid fa-heart"></i>
       </Link>
-      <Link to="/">
+
+      <Link to="/" className="logo">
         <h1>
           <img className="black-logo" src={logoBlack} alt="Logo" width={450} />
         </h1>

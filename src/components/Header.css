@@ -2,7 +2,6 @@
   height: 100px;
   background-color: #fff;
   position: fixed;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,6 +15,7 @@
   padding: 15px;
   color: #ad2632;
 }
+
 .Header .fa-solid:hover {
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
 }
@@ -26,4 +26,18 @@
 
 .Header .black-logo {
   width: 275px;
+}
+
+@media only screen and (min-width: 1000px) {
+  /* .Header .heart {
+    order: 2;
+  }
+
+  .Header .logo {
+    order: 1;
+    padding-left: 20px;
+  }
+  .Header .fa-circle-user {
+    order: 3;
+  } */
 }
