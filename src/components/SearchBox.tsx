@@ -61,38 +61,45 @@ const SearchBox = () => {
       </div>
 
       <div className="drop-down-container">
-        <select
-          className="meal-type"
-          name="meals"
-          onChange={(e) => setMeal(e.target.value)}
-          value={type}
-        >
-          <option value="" disabled selected hidden>
-            meal type
-          </option>
-          <option value="breakfast">Breakfast</option>
-          <option value="lunch">Lunch</option>
-          <option value="dinner">Dinner</option>
-          <option value="appetizers">Appetizers</option>
-          <option value="sides">Side Dishes</option>
-          <option value="dessert">Desserts</option>
-        </select>
-        <select
-          className="diet"
-          name="diet"
-          id="diet"
-          value={diet}
-          onChange={(e) => setDiet(e.target.value)}
-        >
-          <option value="" disabled selected hidden>
-            diet
-          </option>
-          <option value="vegetarian">Vegetarian</option>
-          <option value="vegan">Vegan</option>
-          <option value="glutenFree">Gluten Free</option>
-          <option value="paleo">Paleo</option>
-          <option value="keto">Keto</option>
-        </select>
+        <div className="meal-type-container">
+          <select
+            className="meal-type"
+            name="meals"
+            onChange={(e) => setMeal(e.target.value)}
+            value={type}
+          >
+            <option value="" disabled selected hidden>
+              meal type
+            </option>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="appetizers">Appetizers</option>
+            <option value="sides">Side Dishes</option>
+            <option value="dessert">Desserts</option>
+          </select>
+
+          <i className="fa-solid fa-angle-down"></i>
+        </div>
+        <div className="diet-container">
+          <select
+            className="diet"
+            name="diet"
+            id="diet"
+            value={diet}
+            onChange={(e) => setDiet(e.target.value)}
+          >
+            <option value="" disabled selected hidden>
+              diet
+            </option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="vegan">Vegan</option>
+            <option value="glutenFree">Gluten Free</option>
+            <option value="paleo">Paleo</option>
+            <option value="keto">Keto</option>
+          </select>
+          <i className="fa-solid fa-angle-down"></i>
+        </div>
       </div>
     </form>
   );
