@@ -39,9 +39,14 @@
   align-items: center;
 }
 
+.TodaysBox .RecipeCard {
+  width: 400px;
+}
+
 .TodaysBox img {
   margin-top: 20px;
   width: 380px;
+  height: 281px;
 }
 
 .TodaysBox img:hover {
@@ -59,4 +64,10 @@
 
 .TodaysBox .fa-solid {
   color: #ad2632;
+}
+
+@media only screen and (min-width: 1000px) {
+  .TodaysBox img {
+    height: 281px;
+  }
 }
