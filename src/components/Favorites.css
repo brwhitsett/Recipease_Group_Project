@@ -1,14 +1,28 @@
+/* center the line on h2 */
+
 .Favorites {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 125px 40px 20px 40px;
+  height: 100%;
+  padding: 20px;
+  margin-bottom: 80px;
 }
 
 .Favorites h2 {
   text-align: center;
-  padding: 5px 0 20px 0;
+  padding: 5px 0;
   font-weight: 200;
+  margin: 10px 0 20px;
+  margin-top: 125px;
+  border-bottom: 1px solid #000;
+  line-height: 0.01em;
+  width: 100%;
+}
+
+.Favorites h2 span {
+  background-color: white;
+  padding: 0 10px;
 }
 
 .Favorites p {
@@ -39,7 +53,7 @@
   position: relative;
   font-size: 40px;
   top: -50px;
-  right: -50px;
+  right: -75px;
   color: white;
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
 }
