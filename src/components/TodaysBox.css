@@ -14,7 +14,6 @@
   margin: 10px 0 20px;
   font-family: "Inter", sans-serif;
   font-weight: 300;
-  /* margin-bottom: 10px; */
 }
 
 .TodaysBox h2 span {
@@ -37,34 +36,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.TodaysBox .RecipeCard {
-  width: 400px;
-  height: 400px;
-}
-
-.TodaysBox img {
-  margin-top: 20px;
-  width: 380px;
-  height: 281px;
-}
-
-.TodaysBox img:hover {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
-}
-
-.TodaysBox i {
-  position: relative;
-  font-size: 65px;
-  bottom: 80px;
-  left: 145px;
-  color: white;
-  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
-}
-
-.TodaysBox .fa-solid {
-  color: #ad2632;
 }
 
 @media only screen and (min-width: 1000px) {
