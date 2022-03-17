@@ -6,10 +6,20 @@ import FavoritesIcon from "../assets/icons/favorites.svg";
 import logoWhite from "../assets/logos/logo-white.png";
 
 const Header = () => {
+  const location = useLocation();
+  const path = location.pathname;
+  console.log(path);
+  const checkPage = () => {
+    path !== "/" && path !== "/recipes/complexSearch" ? true : false;
+  };
+
   return (
     <header
       className="Header"
-      style={{ background: useLocation().pathname !== "/" ? "black" : "white" }}
+      style={{
+        background:
+          path === "/" || path === "/recipes/complexSearch" ? "white" : "black",
+      }}
     >
       <div className="logo-and-icon-container">
         <Link to="/recipes/favorites" className="heart">
@@ -19,7 +29,11 @@ const Header = () => {
         <Link to="/" className="logo">
           <h1>
             <img
-              src={useLocation().pathname !== "/" ? logoWhite : logoBlack}
+              src={
+                path === "/" || path === "/recipes/complexSearch"
+                  ? logoBlack
+                  : logoWhite
+              }
               className="black-logo"
               alt="Logo"
               width={450}

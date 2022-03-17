@@ -43,6 +43,9 @@
   margin-top: 10px;
   margin-bottom: 10px;
   text-transform: uppercase;
+}
+
+.Details .favorite-icon-container {
   border-bottom: 1px solid #ad2632;
 }
 
@@ -144,10 +147,17 @@
 
   .Details .title-ingredients-container {
     padding-left: 20px;
+    flex: 1;
   }
 
   .Details .recipe-img-p-container {
     border-bottom: 0 solid #fff;
+    flex: 1;
+  }
+
+  .Details img {
+    width: 600px;
+    margin-bottom: 60px;
   }
 
   .Details .favorite-icon-container {
