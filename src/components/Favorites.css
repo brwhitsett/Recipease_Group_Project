@@ -79,4 +79,15 @@
   .Favorites p {
     font-size: 20px;
   }
+
+  .Favorites .fa-heart {
+    font-size: 50px;
+    left: 230px;
+    top: 165px;
+    color: white;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+  }
+  .Favorites .fa-solid {
+    color: #ad2632;
+  }
 }
