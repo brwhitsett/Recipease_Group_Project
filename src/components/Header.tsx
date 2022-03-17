@@ -9,9 +9,9 @@ const Header = () => {
   const location = useLocation();
   const path = location.pathname;
   console.log(path);
-  const checkPage = () => {
-    path !== "/" && path !== "/recipes/complexSearch" ? true : false;
-  };
+  // const checkPage = () => {
+  //   path !== "/" && path !== "/recipes/complexSearch" ? true : false;
+  // };
 
   return (
     <header
@@ -43,7 +43,12 @@ const Header = () => {
 
         <i
           className="fa-solid fa-circle-user"
-          style={{ color: useLocation().pathname !== "/" ? "white" : "black" }}
+          style={{
+            color:
+              path === "/" || path === "/recipes/complexSearch"
+                ? "black"
+                : "white",
+          }}
         ></i>
       </div>
     </header>

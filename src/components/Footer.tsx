@@ -7,20 +7,35 @@ import { useLocation } from "react-router-dom";
 import logoWhiteIcon from "../assets/logos/logo-icon-white.png";
 
 const Footer = () => {
+  const location = useLocation();
+  const path = location.pathname;
+  console.log(path);
   return (
     <footer
       className="Footer"
-      style={{ background: useLocation().pathname !== "/" ? "black" : "white" }}
+      style={{
+        background:
+          path === "/" || path === "/recipes/complexSearch" ? "white" : "black",
+      }}
     >
       <img
         className="logo-icon"
-        src={useLocation().pathname !== "/" ? logoWhiteIcon : logoIconBlack}
+        src={
+          path === "/" || path === "/recipes/complexSearch"
+            ? logoIconBlack
+            : logoWhiteIcon
+        }
         alt="Black Icon Logo"
         width={100}
       />
       <p
         className="copyright"
-        style={{ color: useLocation().pathname !== "/" ? "white" : "black" }}
+        style={{
+          color:
+            path === "/" || path === "/recipes/complexSearch"
+              ? "black"
+              : "white",
+        }}
       >
         Recipease ©️ Copyright 2022 All Rights Reserved
       </p>
@@ -32,7 +47,10 @@ const Footer = () => {
                 <i
                   className="fa-brands fa-facebook-f"
                   style={{
-                    color: useLocation().pathname !== "/" ? "white" : "black",
+                    color:
+                      path === "/" || path === "/recipes/complexSearch"
+                        ? "black"
+                        : "white",
                   }}
                 ></i>
               </a>
@@ -42,7 +60,10 @@ const Footer = () => {
                 <i
                   className="fa-brands fa-instagram"
                   style={{
-                    color: useLocation().pathname !== "/" ? "white" : "black",
+                    color:
+                      path === "/" || path === "/recipes/complexSearch"
+                        ? "black"
+                        : "white",
                   }}
                 ></i>
               </a>
@@ -52,7 +73,10 @@ const Footer = () => {
                 <i
                   className="fa-brands fa-pinterest-p"
                   style={{
-                    color: useLocation().pathname !== "/" ? "white" : "black",
+                    color:
+                      path === "/" || path === "/recipes/complexSearch"
+                        ? "black"
+                        : "white",
                   }}
                 ></i>
               </a>
