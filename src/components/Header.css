@@ -26,6 +26,10 @@
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
+.Header .fa-solid.dark:hover {
+  text-shadow: 3px 3px 5px rgba(234, 232, 232, 0.4);
+}
+
 .Header .fa-circle-user {
   color: black;
 }
