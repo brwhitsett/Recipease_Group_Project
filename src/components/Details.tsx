@@ -20,50 +20,58 @@ const Details = () => {
   }, [id]);
   return (
     <div className="Details">
-      <div className="recipe-img-p-container">
-        <div className="recipe-image">
-          <img src={recipe?.image} alt={recipe?.title} />
+      <div className="recipe-container">
+        <div className="recipe-img-p-container">
+          <div className="recipe-image">
+            <img src={recipe?.image} alt={recipe?.title} />
+          </div>
         </div>
-
-        <div className="favorite-icon-container">
-          <p className="details-title">{recipe?.title}</p>
-          {isFav(recipe?.id!) ? (
-            <i
-              className="fa-solid fa-heart"
-              onClick={() => removeFavorite(recipe?.id!)}
-            ></i>
-          ) : (
-            <i
-              className="fa-regular fa-heart"
-              onClick={() => addFavorite(recipe!)}
-            ></i>
-          )}
+        <div className="title-ingredients-container">
+          <div className="favorite-icon-container">
+            <p className="details-title">{recipe?.title}</p>
+            {isFav(recipe?.id!) ? (
+              <i
+                className="fa-solid fa-heart"
+                onClick={() => removeFavorite(recipe?.id!)}
+              ></i>
+            ) : (
+              <i
+                className="fa-regular fa-heart"
+                onClick={() => addFavorite(recipe!)}
+              ></i>
+            )}
+          </div>
+          <div className="recipe-details-container">
+            <div className="cuisine-and-dish">
+              <p className="cuisine-text">
+                {recipe?.cuisines.map((item) => `${item} `)}
+              </p>
+              <p className="dishType-text">
+                {recipe?.dishTypes.map((item) => (
+                  <p>{item}</p>
+                ))}
+              </p>
+            </div>
+            <p className="diets">
+              {recipe?.diets.map((item) => (
+                <p>{item}</p>
+              ))}
+            </p>
+            <div className="time-and-servings">
+              <p className="ready-in-minutes">
+                Total Time: {recipe?.readyInMinutes}min
+              </p>
+              <p className="servings">Servings: {recipe?.servings}</p>
+            </div>
+          </div>
+          <p className="ingred-size">Ingredients:</p>
+          <ul className="ingredients-list">
+            {recipe?.extendedIngredients.map((ingredient) => (
+              <li>-{ingredient.original}</li>
+            ))}
+          </ul>
         </div>
       </div>
-
-      <div className="recipe-details-container">
-        <div className="cuisine-and-dish">
-          <p className="cuisine-text">
-            {recipe?.cuisines.map((item) => `${item} `)}
-          </p>
-          <p className="dishType-text">
-            {recipe?.dishTypes.map((item) => `${item} | `)}
-          </p>
-        </div>
-        <p className="diets">{recipe?.diets.map((item) => `${item} | `)}</p>
-        <div className="time-and-servings">
-          <p className="ready-in-minutes">
-            Total Time: {recipe?.readyInMinutes}min
-          </p>
-          <p className="servings">Servings: {recipe?.servings}</p>
-        </div>
-      </div>
-      <p className="ingred-size">Ingredients:</p>
-      <ul className="ingredients-list">
-        {recipe?.extendedIngredients.map((ingredient) => (
-          <li>-{ingredient.original}</li>
-        ))}
-      </ul>
 
       <div className="instruction-container">
         <p className="instruction-title">Instructions:</p>

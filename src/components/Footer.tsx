@@ -3,17 +3,25 @@ import logoIconBlack from "../assets/logos/logo-icon-black.png";
 import facebook from "../assets/icons/facebook.svg";
 import instagram from "../assets/icons/instagram.svg";
 import pinterest from "../assets/icons/pinterest.svg";
+import { useLocation } from "react-router-dom";
+import logoWhiteIcon from "../assets/logos/logo-icon-white.png";
 
 const Footer = () => {
   return (
-    <footer className="Footer">
+    <footer
+      className="Footer"
+      style={{ background: useLocation().pathname !== "/" ? "black" : "white" }}
+    >
       <img
         className="logo-icon"
-        src={logoIconBlack}
+        src={useLocation().pathname !== "/" ? logoWhiteIcon : logoIconBlack}
         alt="Black Icon Logo"
         width={100}
       />
-      <p className="copyright">
+      <p
+        className="copyright"
+        style={{ color: useLocation().pathname !== "/" ? "white" : "black" }}
+      >
         Recipease ©️ Copyright 2022 All Rights Reserved
       </p>
       <div className="social-media-container">
@@ -21,29 +29,32 @@ const Footer = () => {
           <ul>
             <li>
               <a href="#">
-                <img
-                  className="social-media-img"
-                  src={facebook}
-                  alt="facebook icon"
-                />
+                <i
+                  className="fa-brands fa-facebook-f"
+                  style={{
+                    color: useLocation().pathname !== "/" ? "white" : "black",
+                  }}
+                ></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <img
-                  className="social-media-img"
-                  src={instagram}
-                  alt="instagram icon"
-                />
+                <i
+                  className="fa-brands fa-instagram"
+                  style={{
+                    color: useLocation().pathname !== "/" ? "white" : "black",
+                  }}
+                ></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <img
-                  className="social-media-img"
-                  src={pinterest}
-                  alt="pinterest icon"
-                />
+                <i
+                  className="fa-brands fa-pinterest-p"
+                  style={{
+                    color: useLocation().pathname !== "/" ? "white" : "black",
+                  }}
+                ></i>
               </a>
             </li>
           </ul>

@@ -34,7 +34,6 @@
   justify-content: center;
   align-items: center;
   margin-top: 120px;
-  border-bottom: 1px solid #ad2632;
 }
 
 .Details .details-title {
@@ -44,6 +43,7 @@
   margin-top: 10px;
   margin-bottom: 10px;
   text-transform: uppercase;
+  border-bottom: 1px solid #ad2632;
 }
 
 .Details #text {
@@ -52,20 +52,32 @@
 
 .Details .cuisine-and-dish {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   font-size: 20px;
   margin-top: 10px;
   margin-bottom: 3px;
 }
+
 .Details .cuisine-text {
   margin-right: 10px;
-  border-right: 1px solid black;
+  /* border-right: 1px solid black; */
   padding-right: 10px;
+  font-weight: bold;
+  color: #ad2632;
+  font-size: 24px;
+}
+
+.Details .dishType-text {
+  text-align: left;
+  font-size: 18px;
+  font-style: italic;
 }
 
 .Details .diets {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 20px;
+  text-align: left;
+  color: gray;
 }
 
 .Details .time-and-servings {
@@ -93,6 +105,9 @@
 
 .Details .ingred-size {
   font-size: 20px;
+  color: #ad2632;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .Details .instruction-container {
@@ -104,6 +119,9 @@
 
 .Details .instruction-title {
   font-size: 20px;
+  color: #ad2632;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .Details .instruction-list {
@@ -115,4 +133,24 @@
 
 .Details .instruction-steps {
   margin-top: 10px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .Details .recipe-container {
+    display: flex;
+    margin-top: 80px;
+    align-items: center;
+  }
+
+  .Details .title-ingredients-container {
+    padding-left: 20px;
+  }
+
+  .Details .recipe-img-p-container {
+    border-bottom: 0 solid #fff;
+  }
+
+  .Details .favorite-icon-container {
+    border-bottom: 1px solid #ad2632;
+  }
 }
