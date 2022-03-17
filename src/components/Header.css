@@ -41,4 +41,7 @@
     transform: translateY(-50%);
     right: 70px;
   }
+  .Header .black-logo {
+    padding-left: 100px;
+  }
 }

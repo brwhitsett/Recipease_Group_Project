@@ -2,5 +2,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* box-sizing: content-box; */
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.RecipeCard img {
+  margin-top: 20px;
+  width: 380px;
+  height: 281px;
+}
+
+.RecipeCard img:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.RecipeCard .fa-heart {
+  position: absolute;
+  font-size: 65px;
+  right: 20px;
+  top: 230px;
+  color: white;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+  z-index: 4;
+}
+
+.RecipeCard .fa-solid {
+  color: #ad2632;
 }

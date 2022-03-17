@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import FavoritesContext from "../context/FavoritesContext";
 import Recipe from "../models/Recipe";
 import "./RecipeCard.css";
+import logoIconBlack from "../assets/logos/logo-icon-black.png";
 
 interface Props {
   singleRecipeCard: Recipe;
@@ -16,7 +17,11 @@ const RecipeCard = ({ singleRecipeCard }: Props) => {
   return (
     <li className="RecipeCard">
       <Link to={`/recipes/${encodeURIComponent(singleRecipeCard.id)}/details`}>
-        <img src={singleRecipeCard.image!} alt={singleRecipeCard.title} />
+        {singleRecipeCard.image ? (
+          <img src={singleRecipeCard.image!} alt={singleRecipeCard.title} />
+        ) : (
+          <img src={logoIconBlack} alt="logo icon black" />
+        )}
       </Link>
       {isFav(singleRecipeCard.id) ? (
         <i

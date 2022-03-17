@@ -10,9 +10,11 @@ const Favorites = () => {
       <h2>
         <span>YOUR FAVORITE RECIPEASE</span>
       </h2>
-      {favorites.map((favorite) => {
-        return <RecipeCard singleRecipeCard={favorite} key={favorite.id} />;
-      })}
+      <ul>
+        {favorites.map((favorite) => {
+          return <RecipeCard singleRecipeCard={favorite} key={favorite.id} />;
+        })}
+      </ul>
     </div>
   );
 };
