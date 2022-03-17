@@ -8,10 +8,6 @@ import logoWhite from "../assets/logos/logo-white.png";
 const Header = () => {
   const location = useLocation();
   const path = location.pathname;
-  console.log(path);
-  const checkPage = () => {
-    path !== "/" && path !== "/recipes/complexSearch" ? true : false;
-  };
 
   return (
     <header
@@ -23,7 +19,11 @@ const Header = () => {
     >
       <div className="logo-and-icon-container">
         <Link to="/recipes/favorites" className="heart">
-          <i className="fa-solid fa-heart"></i>
+          <i
+            className={`fa-solid fa-heart${
+              path !== "/" && path !== "/recipes/complexSearch" ? " dark" : ""
+            }`}
+          ></i>
         </Link>
 
         <Link to="/" className="logo">
@@ -42,7 +42,9 @@ const Header = () => {
         </Link>
 
         <i
-          className="fa-solid fa-circle-user"
+          className={`fa-solid fa-circle-user${
+            path !== "/" && path !== "/recipes/complexSearch" ? " dark" : ""
+          }`}
           style={{ color: useLocation().pathname !== "/" ? "white" : "black" }}
         ></i>
       </div>
