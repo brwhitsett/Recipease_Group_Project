@@ -1,8 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 import logoBlack from "../assets/logos/logo-black.png";
-import userIcon from "../assets/icons/user.svg";
-import FavoritesIcon from "../assets/icons/favorites.svg";
 import logoWhite from "../assets/logos/logo-white.png";
 
 const Header = () => {
@@ -42,10 +40,13 @@ const Header = () => {
         </Link>
 
         <i
-          className={`fa-solid fa-circle-user${
-            path !== "/" && path !== "/recipes/complexSearch" ? " dark" : ""
-          }`}
-          style={{ color: useLocation().pathname !== "/" ? "white" : "black" }}
+          className="fa-solid fa-circle-user"
+          style={{
+            color:
+              path === "/" || path === "/recipes/complexSearch"
+                ? "black"
+                : "white",
+          }}
         ></i>
       </div>
     </header>
