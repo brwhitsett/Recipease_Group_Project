@@ -67,6 +67,7 @@ const SearchBox = () => {
             name="meals"
             onChange={(e) => setMeal(e.target.value)}
             value={type}
+            aria-label="test-meal"
           >
             <option value="" disabled selected hidden>
               meal type
@@ -88,6 +89,7 @@ const SearchBox = () => {
             id="diet"
             value={diet}
             onChange={(e) => setDiet(e.target.value)}
+            aria-label="label-test"
           >
             <option value="" disabled selected hidden>
               diet
